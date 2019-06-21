@@ -40,7 +40,4 @@ public class Position extends AbstractPosition {
     public void hide(){
         picture.delete();
     }
-
-
-
 }

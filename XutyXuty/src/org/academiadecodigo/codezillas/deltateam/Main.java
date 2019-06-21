@@ -24,6 +24,8 @@ public class Main {
                         Thread.sleep(22);
                     } catch (InterruptedException ex) {
                     }
+                    System.out.println(player.getPosition().getCol());
+                    System.out.println(player.getPosition().getRow());
                 }
 
 

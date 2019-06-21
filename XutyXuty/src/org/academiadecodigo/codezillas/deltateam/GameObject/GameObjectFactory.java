@@ -10,7 +10,7 @@ public class GameObjectFactory {
 
         switch (gameObjectType){
             case PLAYER:
-                gameObject = new Player(grid, grid.makeGridPosition(10,20,"./resources/doll.png")); //mudar
+                gameObject = new Player(grid, grid.makeGridPosition(30,40,"./resources/doll.png")); //mudar
                 break;
            /* case FURNITURE:
                 gameObject = new Furniture(grid.makeGridPosition(10,20,"fas")); //mudar*/

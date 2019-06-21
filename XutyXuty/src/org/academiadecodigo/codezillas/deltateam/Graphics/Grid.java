@@ -10,8 +10,6 @@ public class Grid {
     private Picture picture;
 
     public void init(){
-        this.cols = 10;
-        this.rows = 10;
         this.picture = new Picture(0, 0, "./Resources/map-temple-ruins_50.png");
         this.picture.draw();
     }

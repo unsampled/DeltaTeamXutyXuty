@@ -72,7 +72,6 @@ public abstract class AbstractPosition {
     public void setPos(int col, int row) {
         this.col = col;
         this.row = row;
-        show();
     }
 
     public int getCol() {
