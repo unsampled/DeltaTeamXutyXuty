@@ -31,7 +31,7 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
 
     @Override
     public void move(Direction direction, Position position, int speed){}
-    
+
     public void keyPress(KeyboardEvent keyboardEvent){}
 
     public void keyRelease(KeyboardEvent keyboardEvent){}
