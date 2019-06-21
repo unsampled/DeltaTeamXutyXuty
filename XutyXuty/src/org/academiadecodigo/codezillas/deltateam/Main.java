@@ -15,21 +15,29 @@ public class Main {
         grid.init();
         Player player = (Player) GameObjectFactory.createGameObject(grid, GameObjectType.PLAYER);
 
-        while (true) {
-            try {
-                Thread.sleep(20);
-            } catch (InterruptedException ex) {
-            }
 
-            if (player.isMoving()) {
-                for (int i = 0; i < 5; i++) {
+        while (true) {
+
+            if (player.isMoving()){
+                while (player.isMoving()) {
+                    player.move();
                     try {
-                        Thread.sleep(30);
+                        Thread.sleep(10);
                     } catch (InterruptedException ex) {
                     }
-                    player.move();
                 }
+            }
 
+
+            if (player.getBullet() != null && player.getBullet().isMoving()) {
+                for (int i = 0; i < 60; i++) {
+                    player.getBullet().move();
+                    try {
+                        Thread.sleep(20);
+                    } catch (InterruptedException ex) {
+                    }
+                }
+            player.getBullet().setMoving(false);
             }
         }
     }

@@ -10,6 +10,7 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
+import java.awt.*;
 import java.security.Key;
 
 public class Player extends GameObject implements Movable, Destroyable, KeyboardHandler {
@@ -55,11 +56,31 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
         shoot.setKey(KeyboardEvent.KEY_L);
         shoot.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
 
+        KeyboardEvent Up = new KeyboardEvent();
+        Up.setKey(KeyboardEvent.KEY_UP);
+        Up.setKeyboardEventType(KeyboardEventType.KEY_RELEASED);
+
+        KeyboardEvent Down = new KeyboardEvent();
+        Down.setKey(KeyboardEvent.KEY_DOWN);
+        Down.setKeyboardEventType(KeyboardEventType.KEY_RELEASED);
+
+        KeyboardEvent Right = new KeyboardEvent();
+        Right.setKey(KeyboardEvent.KEY_RIGHT);
+        Right.setKeyboardEventType(KeyboardEventType.KEY_RELEASED);
+
+        KeyboardEvent Left = new KeyboardEvent();
+        Left.setKey(KeyboardEvent.KEY_LEFT);
+        Left.setKeyboardEventType(KeyboardEventType.KEY_RELEASED);
+
         keyboard.addEventListener(up);
         keyboard.addEventListener(down);
         keyboard.addEventListener(left);
         keyboard.addEventListener(right);
         keyboard.addEventListener(shoot);
+        keyboard.addEventListener(Up);
+        keyboard.addEventListener(Down);
+        keyboard.addEventListener(Left);
+        keyboard.addEventListener(Right);
     }
 
     @Override
@@ -94,6 +115,7 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
 
     public void shoot(){
         bullet = new Bullet(grid, grid.makeGridPosition(super.getPosition().getCol(),super.getPosition().getRow(), "./Resources/doll.png"), direction);
+        bullet.setMoving(true);
         bullet.move();
     }
 
@@ -112,12 +134,25 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
     public void move(){
 
         getPosition().moveInDirection(direction, SPEED);
-        moving = false;
-
     }
 
     @Override
     public void keyReleased(KeyboardEvent keyboardEvent){
+
+        switch (keyboardEvent.getKey()){
+            case KeyboardEvent.KEY_DOWN:
+                moving = false;
+                break;
+            case KeyboardEvent.KEY_LEFT:
+                moving = false;
+                break;
+            case KeyboardEvent.KEY_RIGHT:
+                moving = false;
+                break;
+            case KeyboardEvent.KEY_UP:
+                moving = false;
+                break;
+        }
 
     }
 
@@ -127,5 +162,13 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
 
     public boolean isMoving() {
         return moving;
+    }
+
+    public Bullet getBullet() {
+        return bullet;
+    }
+
+    public void setMoving(boolean moving) {
+        this.moving = moving;
     }
 }
