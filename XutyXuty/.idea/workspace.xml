@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73a6f1a8-0d9c-42a4-9c02-feff86c9d215" name="Default Changelist" comment="Merge branch 'master' of https://github.com/Reimao/DeltaTeamXutyXuty&#10;&#10;# Conflicts:&#10;#&#9;XutyXuty/.idea/workspace.xml&#10;#&#9;XutyXuty/src/org/academiadecodigo/codezillas/deltateam/gameobject/Bullet.java">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/codezillas/deltateam/GameObject/Bullet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/codezillas/deltateam/gameobject/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/codezillas/deltateam/gameobject/Bullet.java" afterDir="false" />
-    </list>
+    <list default="true" id="73a6f1a8-0d9c-42a4-9c02-feff86c9d215" name="Default Changelist" comment="Merge branch 'master' of https://github.com/Reimao/DeltaTeamXutyXuty&#10;&#10;# Conflicts:&#10;#&#9;XutyXuty/.idea/workspace.xml&#10;#&#9;XutyXuty/src/org/academiadecodigo/codezillas/deltateam/gameobject/Bullet.java" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +14,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/codezillas/deltateam/GameObject/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state relative-caret-position="289">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -30,13 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/codezillas/deltateam/GameObject/Bullet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#402#403#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -140,7 +131,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561085216515" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561085336375" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -195,11 +186,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6098000" />
+    <option name="totallyTimeSpent" value="6378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="977" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -211,7 +201,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" visible="true" weight="0.3299435" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
@@ -238,6 +228,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of https://github.com/Reimao/DeltaTeamXutyXuty&#10;&#10;# Conflicts:&#10;#&#9;XutyXuty/.idea/workspace.xml&#10;#&#9;XutyXuty/src/org/academiadecodigo/codezillas/deltateam/gameobject/Bullet.java" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/Reimao/DeltaTeamXutyXuty&#10;&#10;# Conflicts:&#10;#&#9;XutyXuty/.idea/workspace.xml&#10;#&#9;XutyXuty/src/org/academiadecodigo/codezillas/deltateam/gameobject/Bullet.java" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/codezillas/deltateam/Engine.java">
@@ -342,16 +333,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/codezillas/deltateam/GameObject/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/codezillas/deltateam/GameObject/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -362,15 +343,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/codezillas/deltateam/GameObject/Bullet.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/codezillas/deltateam/GameObject/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="289">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/codezillas/deltateam/GameObject/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
