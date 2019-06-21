@@ -1,6 +1,7 @@
 package org.academiadecodigo.codezillas.deltateam.GameObject;
 
 import org.academiadecodigo.codezillas.deltateam.Graphics.Direction;
+import org.academiadecodigo.codezillas.deltateam.Graphics.Position;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
@@ -18,17 +19,22 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
     private Direction direction;
     private boolean moving;
 
+
     public void init(){}
+
 
     public void shoot(){}
 
+    @Override
+    public void receiveDamage(int damage){
+    }
+
+    @Override
+    public void move(Direction direction, Position position, int speed){}
+    
     public void keyPress(KeyboardEvent keyboardEvent){}
 
     public void keyRelease(KeyboardEvent keyboardEvent){}
 
-    @Override
-    public static void receiveDamage(int damage){
-        System.out.println("morri");
-    }
 
 }
