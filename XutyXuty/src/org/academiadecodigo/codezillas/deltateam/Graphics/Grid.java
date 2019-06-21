@@ -9,15 +9,32 @@ public class Grid {
     private int rows;
     private Picture picture;
 
-    public void init(){}
+    public void init(){
+        this.cols = 10;
+        this.rows = 10;
+        this.picture = new Picture(0, 0, "./Resources/map-temple-ruins_50.png");
+        this.picture.draw();
+    }
 
-    public int colsToX(int cols){return 0;}
+    public int colsToX(int col){
+        return CELL_SIZE * col;
+    }
 
-    public int rowsToY(int rows){return 0;}
+    public int rowsToY(int row){
+        return CELL_SIZE * row;
+    }
 
-    public Position makeGridPosition(int rows, int cols){
-        return new Position();
+    public Position makeGridPosition(int row, int col, Picture picture){ //temos de passar uma pic - no carcrash a pic era um ret q era criado na position
+        return new Position(col, row, this, picture);
     }
 
 
+    //GETTERS & SETTERS
+    public int getRows() {
+        return rows;
+    }
+
+    public int getCols() {
+        return cols;
+    }
 }
