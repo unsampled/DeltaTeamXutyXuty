@@ -18,15 +18,13 @@ public class Main {
 
         while (true) {
 
-            if (player.isMoving()){
                 while (player.isMoving()) {
                     player.move();
                     try {
-                        Thread.sleep(10);
+                        Thread.sleep(22);
                     } catch (InterruptedException ex) {
                     }
                 }
-            }
 
 
             if (player.getBullet() != null && player.getBullet().isMoving()) {
