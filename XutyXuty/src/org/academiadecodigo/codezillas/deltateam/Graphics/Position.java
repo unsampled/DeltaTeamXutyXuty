@@ -3,18 +3,15 @@ package org.academiadecodigo.codezillas.deltateam.Graphics;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Position extends AbstractPosition {
-    private Grid grid;
     private Picture picture;
 
 
-    public Position (int col, int row, Grid grid, Picture picture) {
+    public Position (int col, int row, Grid grid, String picture) {
         super(col, row, grid);
-        this.picture = picture;
+        this.picture = new Picture(col,row,picture);
 
         int x = grid.colsToX(col);
         int y = grid.rowsToY(row);
-
-        this.picture = picture;
 
         show();
 
@@ -28,8 +25,8 @@ public class Position extends AbstractPosition {
 
         super.moveInDirection(direction, distance);
 
-        int dx = grid.colsToX(getCol()) - grid.colsToX(initialCol);
-        int dy = grid.rowsToY(getRow()) - grid.rowsToY(initialRow);
+        int dx = super.getGrid().colsToX(getCol()) - super.getGrid().colsToX(initialCol);
+        int dy = super.getGrid().rowsToY(getRow()) - super.getGrid().rowsToY(initialRow);
 
         this.picture.translate(dx,dy);
     }

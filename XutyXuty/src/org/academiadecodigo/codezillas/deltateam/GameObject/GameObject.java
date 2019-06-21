@@ -11,14 +11,18 @@ public abstract class GameObject {
     private Grid grid;
     private GameObjectType gameObjectType;
 
-    public GameObject(Position position, GameObjectType gameObjectType){
+    public GameObject(Grid grid, Position position, GameObjectType gameObjectType){
         this.position = position;
         this.gameObjectType = gameObjectType;
+        this.grid = grid;
     }
 
     public void setGrid(Grid grid){
         this.grid = grid;
     }
 
+    public Position getPosition() {
+        return position;
+    }
 
 }

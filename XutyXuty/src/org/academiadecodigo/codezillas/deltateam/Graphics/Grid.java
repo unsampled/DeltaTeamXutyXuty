@@ -4,7 +4,7 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Grid {
 
-    public static final int CELL_SIZE = 10; //change cell size
+    public static final int CELL_SIZE = 5; //change cell size
     private int cols;
     private int rows;
     private Picture picture;
@@ -24,7 +24,7 @@ public class Grid {
         return CELL_SIZE * row;
     }
 
-    public Position makeGridPosition(int row, int col, Picture picture){ //temos de passar uma pic - no carcrash a pic era um ret q era criado na position
+    public Position makeGridPosition(int col, int row, String picture){ //temos de passar uma pic - no carcrash a pic era um ret q era criado na position
         return new Position(col, row, this, picture);
     }
 
@@ -36,5 +36,9 @@ public class Grid {
 
     public int getCols() {
         return cols;
+    }
+
+    public Grid getGrid(){
+        return this;
     }
 }

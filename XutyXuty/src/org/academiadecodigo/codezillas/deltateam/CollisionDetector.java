@@ -12,7 +12,7 @@ public class CollisionDetector {
         this.gameObjects = gameObjects;
     }
 
-    public void bulletCheck(Bullet bullet){             //Or Position of the bullet as parameter
+    /*public void bulletCheck(Bullet bullet){             //Or Position of the bullet as parameter
         for (GameObject goCounter : gameObjects) {
 
             // No point in checking collisions with self
@@ -48,5 +48,5 @@ public class CollisionDetector {
 
             }
         }
-    }
+    }*/
 }
