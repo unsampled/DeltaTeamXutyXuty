@@ -13,8 +13,8 @@ public class Main {
     public static void main(String[] args) {
         Grid grid = new Grid();
         grid.init();
-        Player player = (Player) GameObjectFactory.createGameObject(grid, 5, 5, GameObjectType.PLAYER);
-
+        MapFactory.init(grid);
+        Player player = (Player) GameObjectFactory.createGameObject(grid, 1, 1, GameObjectType.PLAYER);
 
         while (true) {
 
