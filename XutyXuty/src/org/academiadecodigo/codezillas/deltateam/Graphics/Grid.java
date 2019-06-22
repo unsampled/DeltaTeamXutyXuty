@@ -4,7 +4,7 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Grid {
 
-    public static final int CELL_SIZE = 14; //change cell size
+    public static final int CELL_SIZE = 13; //change cell size
     private int cols;
     private int rows;
     private Picture picture;

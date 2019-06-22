@@ -12,8 +12,9 @@ public class GameObjectFactory {
             case PLAYER:
                 gameObject = new Player(grid, grid.makeGridPosition(col,row,"./resources/doll.png")); //mudar
                 break;
-           /* case FURNITURE:
-                gameObject = new Furniture(grid.makeGridPosition(10,20,"fas")); //mudar*/
+           case FURNITURE:
+                gameObject = new Furniture(grid, grid.makeGridPosition(col,row,"Box.png"));//mudar
+                break;
             default:
                 return null;
         }
