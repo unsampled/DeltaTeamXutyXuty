@@ -42,23 +42,23 @@ public abstract class AbstractPosition {
 
     //VER
     private void moveUp(int distance){
-        int maxRowsUp = Math.min(distance,0); //mal
-        setPos(col, row - maxRowsUp);
+        //int maxRowsUp = Math.min(distance,0); //mal
+        setPos(col, row - distance);
     }
 
     private void moveDown(int distance){
-        int maxRowsDown = Math.min(distance,getRow());
-        setPos(col, row - maxRowsDown);
+        //int maxRowsDown = Math.min(distance,getRow());
+        setPos(col, row + distance);
     }
 
     private void moveLeft(int distance){
-        int maxColsLeft = Math.min(distance,0);
-        setPos(col - maxColsLeft, row);
+        //int maxColsLeft = Math.min(distance,0);
+        setPos(col - distance, row);
     }
 
     private void moveRight(int distance){
-        int maxColsRight = Math.min(distance,getCol());
-        setPos(col - maxColsRight, row);
+        //int maxColsRight = Math.min(distance,getCol());
+        setPos(col + distance, row);
     }
 
     //BR
@@ -72,7 +72,6 @@ public abstract class AbstractPosition {
     public void setPos(int col, int row) {
         this.col = col;
         this.row = row;
-        show();
     }
 
     public int getCol() {
