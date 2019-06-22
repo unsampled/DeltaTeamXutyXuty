@@ -1,5 +1,6 @@
 package org.academiadecodigo.codezillas.deltateam.GameObject;
 
+import org.academiadecodigo.codezillas.deltateam.CollisionDetector;
 import org.academiadecodigo.codezillas.deltateam.Graphics.Grid;
 import org.academiadecodigo.codezillas.deltateam.Graphics.Position;
 
@@ -10,6 +11,7 @@ public abstract class GameObject {
     private Position position;
     private Grid grid;
     private GameObjectType gameObjectType;
+    private CollisionDetector collisionDetector;
 
     public GameObject(Grid grid, Position position, GameObjectType gameObjectType){
         this.position = position;
@@ -28,4 +30,9 @@ public abstract class GameObject {
     public void setPosition(Position position) {
         this.position = position;
     }
+
+
+    public void setCollisionDetector(CollisionDetector collisionDetector) {
+        this.collisionDetector = collisionDetector;}
+
 }

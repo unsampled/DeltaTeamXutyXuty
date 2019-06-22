@@ -114,7 +114,7 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
     }
 
     public void shoot(){
-        bullet = new Bullet(grid, grid.makeGridPosition(this.getPosition().getCol(), this.getPosition().getRow(), "./Resources/doll.png"), direction);
+        bullet = new Bullet(grid, grid.makeGridPosition(this.getPosition().getCol(), this.getPosition().getRow(), "./Resources/Bullet.png"), direction);
         bullet.setMoving(true);
         bullet.move();
     }

@@ -8,11 +8,12 @@ public class Position extends AbstractPosition {
 
     public Position (int col, int row, Grid grid, String picture) {
         super(col, row, grid);
-        this.picture = new Picture(col,row,picture);
+
 
         int x = grid.colsToX(col);
         int y = grid.rowsToY(row);
 
+        this.picture = new Picture(x, y,picture);
         show();
 
     }

@@ -32,4 +32,8 @@ public class Bullet extends  GameObject implements Movable{
     public void setMoving(boolean moving) {
         this.moving = moving;
     }
+
+    public void hide(){
+        this.getPosition().hide();
+    }
 }

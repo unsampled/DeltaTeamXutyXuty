@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Grid grid = new Grid();
         grid.init();
-        Player player = (Player) GameObjectFactory.createGameObject(grid, GameObjectType.PLAYER);
+        Player player = (Player) GameObjectFactory.createGameObject(grid, 5, 5, GameObjectType.PLAYER);
 
 
         while (true) {
@@ -21,24 +21,22 @@ public class Main {
                 while (player.isMoving()) {
                     player.move();
                     try {
-                        Thread.sleep(22);
+                        Thread.sleep(30);
                     } catch (InterruptedException ex) {
                     }
-                    System.out.println(player.getPosition().getCol());
-                    System.out.println(player.getPosition().getRow());
                 }
-
-
             if (player.getBullet() != null && player.getBullet().isMoving()) {
-                for (int i = 0; i < 60; i++) {
+                for (int i = 0; i < 85; i++) {
                     player.getBullet().move();
                     try {
-                        Thread.sleep(20);
+                        Thread.sleep(7);
                     } catch (InterruptedException ex) {
                     }
                 }
             player.getBullet().setMoving(false);
             }
+
+
         }
     }
 }
