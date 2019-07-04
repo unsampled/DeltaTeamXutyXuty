@@ -19,6 +19,7 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
     private boolean moving;
     private boolean canShoot = true;
     private Grid grid;
+    //TODO: player also has all game objects, makes absolute sense
     private GameObject[] gameObjects = GameObjectFactory.getGameObjects();
     private  boolean canChangeDirection = true;
     private int distance;
@@ -91,6 +92,7 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
                     distance = getPosition().getRow() + 2;
                     break;
                 case DOWN:
+                    //TODO:CELL_SIZE is static, why are you accessing it through an instance?
                     distance = (grid.getPicture().getHeight()/grid.CELL_SIZE) - getPosition().getRow();
                     break;
                 case LEFT:
@@ -133,7 +135,7 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
         }
 
     }
-
+    //TODO:could be private, make it private
     public void shoot(){
         bullet = new Bullet(grid, grid.makeGridPosition(this.getPosition().getCol(), this.getPosition().getRow(), "./Resources/Bullet2.png"), direction);
         bullet.setMoving(true);
@@ -168,7 +170,7 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
 
     @Override
     public void keyReleased(KeyboardEvent keyboardEvent){
-
+        //TODO:all resolutions are the same no matter what key is pressed, why a switch?
         switch (keyboardEvent.getKey()){
             case KeyboardEvent.KEY_DOWN:
                 moving = false;
@@ -197,7 +199,7 @@ public class Player extends GameObject implements Movable, Destroyable, Keyboard
     public Bullet getBullet() {
         return bullet;
     }
-
+    //TODO:unused setter
     public void setMoving(boolean moving) {
         this.moving = moving;
     }

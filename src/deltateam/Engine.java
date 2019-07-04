@@ -6,6 +6,7 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Engine {
 
+    //TODO: local over global
     private Grid grid;
     private Player player;
     private GameObject[] gameObjects;
@@ -13,25 +14,31 @@ public class Engine {
     private Picture picture;
     private Menu menu;
 
-
+    //TODO: constructor initializes state, only
     public Engine() {
         menu = new Menu();
         Music.startMusic("/Resources/sound/menu.wav",true);
         while (!menu.isStartGame()){
             try {
                 Thread.sleep(10);
+                //TODO: empty catch
             } catch (InterruptedException ex) {
             }
         }
         grid = new Grid();
         grid.init();
         MapFactory.init(grid);
+        //TODO: unsafe cast
         this.player = (Player) GameObjectFactory.createGameObject(grid, 3, 3, GameObjectType.PLAYER);
         player2 = new Player2Thread(grid);
+        //TODO: IDE warnings are there for a reason
         gameObjects = player.getGameObjects();
         player2.setGameObjects(gameObjects);
     }
 
+    //TODO: package-private access, why
+    //TODO: also why are they down here
+    //TODO: also bad variable names
     boolean exitPlayer = false;
     boolean exitBullet = false;
 
@@ -43,20 +50,27 @@ public class Engine {
     }
 
     //DO NOT OPEN!!!!! NAO ABRIR!!!!! NICHT OFFNEN!!!!! NIE OTWIERAC!!!!! KHUL'HA NÃ HÕVÕ!!!!!
+    //TODO: this method has 96 lines of code
     private void player1Start() {
+        //TODO: while true is always a great idea
         while (true) {
             try {
                 Thread.sleep(10);
+                //TODO: empty catch. good luck figuring out wtf happened.
             } catch (InterruptedException ex) {
             }
+            //TODO: bad method name "isCanChangeDirection"
             if (player.isMoving() && player.isCanChangeDirection()) {
+                //TODO: bad method name
                 player.setCanChangeDirection(false);
                 while (player.isMoving()) {
                     player.getPosition().moveHitBox(player.getDirection(), player.getSPEED());
                     for (int i = 0; i < gameObjects.length; i++) {
+                        //TODO: magic numbers
                         if (i == 123 || i == 125 || gameObjects[i] == null) {
                             continue;
                         }
+                        //TODO: local var for readability
                         if (gameObjects[i].getPosition().getHitBox() != null && gameObjects[123].getPosition().getHitBox().intersects(gameObjects[i].getPosition().getHitBox())) {
                             if (i == 0) {
                                 player.setArmour(true);
@@ -78,6 +92,7 @@ public class Engine {
                     player.move();
                     try {
                         Thread.sleep(42);
+                        //TODO: ...
                     } catch (InterruptedException ex) {
                     }
                 }
@@ -101,6 +116,7 @@ public class Engine {
                             if (gameObjects[j] == gameObjects[124]) {
                                 Player player1 = (Player) gameObjects[123];
                                 Player2 player2 = (Player2) gameObjects[124];
+                                //TODO: fantastic
                                 boolean useless = true;
                                 player1.getBullet().hit(player2);
                                 if (player2.isDestroyed()) {
@@ -112,6 +128,7 @@ public class Engine {
                                     picture.draw();
                                     try {
                                         Thread.sleep(4000);
+                                        //TODO: ...
                                     } catch (InterruptedException ex) {
                                     }
                                     System.exit(0);
@@ -128,12 +145,14 @@ public class Engine {
                     player.getBullet().move();
                     try {
                         Thread.sleep(4);
+                        //TODO: ...
                     } catch (InterruptedException ex) {
                     }
                 }
                 player.getBullet().setMoving(false);
                 player.setCanShoot(true);
             }
+            //TODO: great condition for while
             if (player.getHitPoints() == 0) {
                 return;
             }

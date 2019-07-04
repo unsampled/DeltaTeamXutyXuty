@@ -2,7 +2,7 @@ package deltateam;
 
 import deltateam.GameObject.*;
 import deltateam.Graphics.Grid;
-
+//TODO:kill me now
 public class MapFactory {
 
     public static void init(Grid grid) {
@@ -34,6 +34,7 @@ public class MapFactory {
         Furniture furniture25 = (Furniture) GameObjectFactory.createGameObject(grid,52,30,GameObjectType.FURNITURE);
         Furniture furniture26 = (Furniture) GameObjectFactory.createGameObject(grid,50,30,GameObjectType.FURNITURE);
 
+        //TODO: magic numbers
         for (int i = 0; i < 40; i = i + 2) {
             GameObjectFactory.createGameObject(grid,0,i,GameObjectType.FURNITURE2);
         }
@@ -48,5 +49,3 @@ public class MapFactory {
         }
     }
 }
-
-

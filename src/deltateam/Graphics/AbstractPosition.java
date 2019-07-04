@@ -31,6 +31,7 @@ public abstract class AbstractPosition {
 
     }
 
+    //TODO: unused
     public boolean equals(Position position){
         return this.col == position.getCol() && this.row == position.getRow();
     }
@@ -40,27 +41,33 @@ public abstract class AbstractPosition {
     public abstract void hide();
 
 
+    //TODO:VER
     //VER
     private void moveUp(int distance){
+        //TODO:if its bad get rid of it
         //int maxRowsUp = Math.min(distance,0); //mal
         setPos(col, row - distance);
     }
 
     private void moveDown(int distance){
+        //TODO:fetus deletus
         //int maxRowsDown = Math.min(distance,getRow());
         setPos(col, row + distance);
     }
 
     private void moveLeft(int distance){
+        //TODO:begone thot
         //int maxColsLeft = Math.min(distance,0);
         setPos(col - distance, row);
     }
 
     private void moveRight(int distance){
+        //TODO: *internal screaming*
         //int maxColsRight = Math.min(distance,getCol());
         setPos(col + distance, row);
     }
 
+    //TODO: wut
     //BR
 
 
@@ -69,6 +76,7 @@ public abstract class AbstractPosition {
         return grid;
     }
 
+    //TODO:IDE has great ideas sometimes
     public void setPos(int col, int row) {
         this.col = col;
         this.row = row;

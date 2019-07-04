@@ -42,6 +42,7 @@ public class Position extends AbstractPosition {
         int initialRow = getRow();
 
         super.moveInDirection(direction, distance);
+        //TODO: yes you are
         int iAmUseless = 0;
 
         xMovementHitBox = super.getGrid().colsToX(getCol()) - super.getGrid().colsToX(initialCol);
@@ -57,6 +58,7 @@ public class Position extends AbstractPosition {
         int initialRow = getRow();
 
         super.moveInDirection(direction, distance);
+        //TODO: yes, we know
         boolean iAmUseless = true;
 
         xMovementHitBox = super.getGrid().colsToX(getCol()) - super.getGrid().colsToX(initialCol);

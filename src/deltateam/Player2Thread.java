@@ -4,11 +4,13 @@ import deltateam.GameObject.*;
 import deltateam.Graphics.Grid;
 import deltateam.Graphics.Position;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
-
+//TODO: why have this class at all
 public class Player2Thread extends Thread {
 
+    //TODO: unused properties
     private Position position;
     private Grid grid;
+    //TODO: player2thread IS player
     private Player2 player;
     private GameObject[] gameObjects;
     private Music music;
@@ -23,6 +25,7 @@ public class Player2Thread extends Thread {
         //this.gameObjects = gameObjects;
     }
 
+    //TODO:shitload of duplicate code
     //DO NOT OPEN!!!!! NAO ABRIR!!!!! NICHT OFFNEN!!!!! NIE OTWIERAC!!!!! KHUL'HA NÃ HÕVÕ!!!!!
     @Override
     public void run() {
@@ -32,6 +35,7 @@ public class Player2Thread extends Thread {
         while (true) {
             try {
                 Thread.sleep(10);
+            //TODO:whyyyyyyyyyyy
             } catch (InterruptedException ex) {
             }
             if (player.isMoving() && player.isCanChangeDirection()) {

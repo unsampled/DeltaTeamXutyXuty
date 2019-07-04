@@ -7,6 +7,7 @@ public abstract class GameObject {
 
     private Position position;
     private Grid grid;
+    //TODO:unused property
     private GameObjectType gameObjectType;
 
     public GameObject(Grid grid, Position position, GameObjectType gameObjectType){
@@ -31,6 +32,8 @@ public abstract class GameObject {
         return grid;
     }
 
+    //TODO: importing Rectangle from outside simple graphics
+    //TODO:unused method
     public java.awt.Rectangle hitBox(){
         int initialX = grid.colsToX(position.getCol());
         int initialY = grid.rowsToY(position.getRow());

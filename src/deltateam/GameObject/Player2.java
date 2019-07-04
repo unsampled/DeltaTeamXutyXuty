@@ -1,5 +1,5 @@
 package deltateam.GameObject;
-
+//TODO:useless class, complete copy of Player
 import deltateam.Graphics.Direction;
 import deltateam.Graphics.Grid;
 import deltateam.Graphics.Position;
@@ -89,6 +89,7 @@ public class Player2 extends GameObject implements Movable, Destroyable, Keyboar
         if(keyboardEvent.getKey() == KeyboardEvent.KEY_Q && canShoot && !moving) {
             switch (direction){
                 case UP:
+                    //TODO:brilliant
                     boolean useless = true;
                     distance = getPosition().getRow() + 2;
                     break;
@@ -115,6 +116,7 @@ public class Player2 extends GameObject implements Movable, Destroyable, Keyboar
             case KeyboardEvent.KEY_A:
                 if(canChangeDirection) {
                     direction = Direction.LEFT;
+                    //TODO:directories should never be capitallized
                     getPosition().getPicture().load("./Resources/doll2Left.png");
                     moving = true;
                 }
@@ -185,7 +187,7 @@ public class Player2 extends GameObject implements Movable, Destroyable, Keyboar
         }
 
     }
-
+    //TODO:unused methods
     public int getHitPoints() {
         return hitPoints;
     }

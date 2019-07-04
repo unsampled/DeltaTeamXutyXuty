@@ -5,6 +5,7 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public class Grid {
 
     public static final int CELL_SIZE = 20; //change cell size
+    //TODO: unused properties
     private int cols;
     private int rows;
     private Picture picture;
@@ -27,6 +28,7 @@ public class Grid {
     }
 
 
+    //TODO:unused getters and setters
     //GETTERS & SETTERS
     public int getRows() {
         return rows;

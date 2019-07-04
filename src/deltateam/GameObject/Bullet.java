@@ -6,6 +6,7 @@ import deltateam.Graphics.Position;
 
 public class Bullet extends GameObject implements Movable{
 
+    //TODO:useless comments
     private static final int SPEED = 1; //check
     private static final int DAMAGE = 100; //check
     private boolean moving;
@@ -17,6 +18,7 @@ public class Bullet extends GameObject implements Movable{
         this.direction = direction;
     }
 
+    //TODO: should receive a Player
     public void hit(Player player){
         player.receiveDamage(DAMAGE);
     }
@@ -43,6 +45,7 @@ public class Bullet extends GameObject implements Movable{
         this.getPosition().hide();
     }
 
+    //TODO:unused methods
     public void setAvailable(boolean available) {
         this.available = available;
     }
@@ -51,6 +54,8 @@ public class Bullet extends GameObject implements Movable{
         return available;
     }
 
+    //TODO:constant getters should use SCREAMING_SNAKE_CASE
+    //TODO:also constants that are static should be public, or just final and not static
     public int getSPEED() {
         return SPEED;
     }
